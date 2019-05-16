@@ -12,7 +12,6 @@
 
 //   form.addEventListener('submit', validate);
 // };
-// alert('flor');
 
 const form = document.getElementById('survey-form');
 const elementsForm = form.elements;
@@ -25,10 +24,10 @@ function start() {
 }
 
 function validate(evt) {
-  var cla1 = form.name.value;
-  var cla2 = form.email.value;
-  if (cla1 !== cla2) {
-    alert('Las claves ingresadas son distintas');
+  var name = form.name.value;
+  var email = form.email.value;
+  if (name === '') {
+    alert('Escribir nombre');
     evt.preventDefault();
   }
 }
