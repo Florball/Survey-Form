@@ -137,8 +137,9 @@ body {
   box-shadow: 7px 7px 10px -6px rgba(0,0,0,0.75);
   font-size: 1.2rem;
   margin-inline-start: 2.7rem;
-  padding: 1.2% 4%;
-  outline: 0;  
+  outline: 0; 
+  padding: 1.2% 4%; 
+  text-align: center;
   width: 20%;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
@@ -165,6 +166,7 @@ body {
     font-size: 1rem;
   }
   .option-improve {
+    font-size: 0.9rem;
     width: 65%;
   }
   .txt-opinion {
@@ -176,7 +178,10 @@ body {
     flex-direction: column;
   }
   .btn-submit {
+    font-size: 0.9rem;
     margin-inline-start: 0;
-    width: 30%;
+    text-align: center;
+    width: 35%;
   }
 }
+

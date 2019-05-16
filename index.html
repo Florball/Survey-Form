@@ -27,15 +27,15 @@
         Sus
         respuestas serán tratadas de forma confidencial y serán utilizadas únicamente para mejorar el servicio que le
         proporcionamos.</p>
-      <form action="" method="get" name="survey-form" class="survey-form font2" id="survey-form">
+      <form action="process.php" method="get" name="survey-form" class="survey-form font2" id="survey-form">
         <label for="name" id="name-label" >Nombre:
-          <input name="user" class="personal-information font2 margin-bottom1" type="text" id="name" maxlength="35" placeholder="Ingresa tu nombre" required>
+          <input name="user" class="personal-information font2 margin-bottom1" type="text" id="name" maxlength="35" placeholder="Ingresa tu nombre">
         </label>
         <label for="age" id="number-label">Edad:
           <input name="age" class="personal-information font2 margin-bottom1" type="number" id="number" placeholder="18" min="10" max="100">
         </label>
         <label for="email" id="email-label">Email:
-          <input name="email" class="personal-information font2 margin-bottom2" type="email" id="email" maxlength="25" placeholder="ejemplo@email.com" required>
+          <input name="email" class="personal-information font2 margin-bottom2" type="email" id="email" maxlength="25" placeholder="ejemplo@email.com">
         </label>
         <label class="margin-bottom1">¿Cuánto tiempo lleva utilizando los servicios del metro de Lima?</label>
         <select class="font2 options-margin option-improve margin-bottom2" id="dropdown">
@@ -143,7 +143,7 @@
           <input type="checkbox" value="6">
           Limpieza
         </label>
-        <label class="options-margin list margin-bottom1">
+        <label class="options-margin list margin-bottom2">
           <input type="checkbox" value="7">
           Señalización
         </label>
@@ -151,7 +151,7 @@
           proporciona?</label>
         <textarea class="font1 txt-opinion options-margin margin-bottom2" id="comment" placeholder="Sí, me gustaría decirles..."></textarea>
         <div class="cont-btn-submit">
-          <input class="btn-submit font1 margin-bottom2" type="submit" id="btn-submit" value="Enviar">
+          <input class="btn-submit font2 margin-bottom2" type="submit" id="btn-submit" value="Enviar">
         </div>
       </form>
     </div>
