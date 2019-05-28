@@ -1,7 +1,9 @@
 // Declarando constantes de elementos.
 const form = document.getElementById('survey-form');
-//const elementsForm = form.elements;
 const buttom = document.getElementById('btn-submit');
+const name = form.name;
+const age = form.number;
+const email = form.email;
 
 // Evento al cargar la ventana.
 window.addEventListener('load', start, false);
@@ -11,8 +13,9 @@ function start() {
   form.addEventListener('submit', validate, false);
 }
 
-function name() {
-  object.addEventListener("keyup", myScript); 
+//Función cambia los estilos del estado error 
+const validate2 = (evt) => {
+  validateName(evt);
 }
 
 // Funcion validar campos.
@@ -22,34 +25,35 @@ const validate = (evt) => {
   validateEmail(evt);
 }
 
-// Funcion validar name.
+// Función validar name.
 const validateName = (evt) => {
-  const name = form.name.value;
   let reg = /^[ña-z]+[ña-z ]{6,30}$/i;
-  let OK = reg.exec(name);
+  let OK = reg.test(name.value);
   if (!OK) {
-    form.name.className = 'error';
+    name.className = 'error';
     alert('Llenar campo nombre, usando minimo 6 y máximo 40 caracteres.');
     evt.preventDefault();
   }
+  else {
+    name.className = 'personal-information'
+  }
 }
 
-// Funcion validar edad. (CORREGIR CAMPO EDAD, SALE SIEMPRE LLENAR CAMPO EDAD)
+// Funcion validar edad. 
 const validateAge = (evt) => {
-  const age = form.number.value;
-  let reg = /^([0-9]*){2}/;
-  let OK = reg.exec(age);
-  if (!OK) {
-    form.age.className = 'error';
+  const ageValue = age.value; 
+  if (ageValue === '') {
+    age.className = 'error';
     alert('Llenar campo edad')
     evt.preventDefault();
   }
-  else if (age < 16 || age > 80) {
-    form.age.className = 'error';
+  else if (ageValue < 16 || ageValue > 80) {
+    age.className = 'error';
     alert('La edad mínima para llenar el formulario es de 16 años y la maxima de 80 años');
     evt.preventDefault();
   }
-  else if (isNaN(age)) {
+  else if (isNaN(ageValue)) {
+    age.className = 'error';
     alert('El campo edad se llena con números');
     evt.preventDefault();
   }
@@ -57,17 +61,16 @@ const validateAge = (evt) => {
 
 // Funcion validar email. 
 const validateEmail = (evt) => {
-  const email = form.email.value;
   let reg = /^\w+([.-]?\w+)*@(([a-zA-Z])+\.)+([a-zA-Z]{2,4})+$/i;
-  let OK = reg.exec(email);
-  if (email === '') {
-    form.email.className = 'error'; 
+  let OK = reg.exec(email.value);
+  if (email.value === '') {
+    email.className = 'error'; 
     window.alert(" Llenar campo email");
     evt.preventDefault();
   }
   else if (!OK) {
-    form.email.className = 'error'; 
-    window.alert(email + " no es un correo válido");
+    email.className = 'error'; 
+    window.alert(email.value + " no es un correo válido");
     evt.preventDefault();
   }
 }

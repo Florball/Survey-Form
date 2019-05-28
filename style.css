@@ -91,7 +91,7 @@ body {
   border: 1.5px solid #bdbdbd;
 }
 .personal-information::-webkit-input-placeholder{
-  color: #ffffff;
+  color: #ccc9c9;
   font-size: 1.1rem;
 }
 .option-improve {
@@ -123,7 +123,7 @@ body {
   font-size: 1.2rem;
   height: 5rem;
   outline: 0;
-  padding: 0.3rem 0.5rem;
+  padding: 0.4rem 0.6rem;
   resize: vertical;
   width: 75%;
   -webkit-border-radius: 12px;
