@@ -11,11 +11,9 @@ window.addEventListener('load', start, false);
 // Función enviar y el formulario al validar.
 function start() {
   form.addEventListener('submit', validate, false);
-}
-
-//Función cambia los estilos del estado error 
-const validate2 = (evt) => {
-  validateName(evt);
+  name.addEventListener('keyup', (e) => validateName(e.target.value));
+  age.addEventListener('keyup', (e) => validateAge(e.target.value));
+  email.addEventListener('keyup', (e) => validateEmail(e.target.value));
 }
 
 // Funcion validar campos.
@@ -35,7 +33,7 @@ const validateName = (evt) => {
     evt.preventDefault();
   }
   else {
-    name.className = 'personal-information'
+    name.className = 'personal-information';
   }
 }
 
@@ -57,6 +55,9 @@ const validateAge = (evt) => {
     alert('El campo edad se llena con números');
     evt.preventDefault();
   }
+  else {
+    age.className = 'personal-information';
+  }
 }
 
 // Funcion validar email. 
@@ -72,5 +73,8 @@ const validateEmail = (evt) => {
     email.className = 'error'; 
     window.alert(email.value + " no es un correo válido");
     evt.preventDefault();
+  }
+  else {
+    email.className = 'personal-information';
   }
 }
