@@ -29,6 +29,7 @@ const validateName = (evt) => {
   let OK = reg.test(name.value);
   if (!OK) {
     name.className = 'error';
+    scrollTo(document.body, 200);
     evt.preventDefault();
   }
   else {
@@ -41,17 +42,17 @@ const validateAge = (evt) => {
   const ageValue = age.value; 
   if (ageValue === '') {
     age.className = 'error';
-
+    scrollTo(document.body, 200);
     evt.preventDefault();
   }
   else if (ageValue < 16 || ageValue > 80) {
     age.className = 'error';
-
+    scrollTo(document.body, 200);
     evt.preventDefault();
   }
   else if (isNaN(ageValue)) {
     age.className = 'error';
-    
+    scrollTo(document.body, 200);
     evt.preventDefault();
   }
   else {
@@ -65,12 +66,12 @@ const validateEmail = (evt) => {
   let OK = reg.exec(email.value);
   if (email.value === '') {
     email.className = 'error'; 
-    
+    scrollTo(document.body, 200);
     evt.preventDefault();
   }
   else if (!OK) {
     email.className = 'error'; 
-    
+    scrollTo(document.body, 200);
     evt.preventDefault();
   }
   else {
