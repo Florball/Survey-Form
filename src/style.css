@@ -4,7 +4,7 @@ body {
 
 /* Fondo de pantalla */
 .container-all {
-  background-image: url(images/metro-de-lima.jpg);
+  background-image: url(../images/metro-de-lima.jpg);
   padding-block-end: 5%;
 }
 .main {
@@ -171,7 +171,7 @@ body {
 /* Inputs requeridos o con error */
 .error {
   background: #ffffff;
-  border: 1px solid  #f52a2a;
+  border: 1px solid  #dd1a1a;
   border-radius: 12px;
   color: #000000;
   font-family: 'Merriweather', serif;
@@ -187,6 +187,10 @@ body {
 
 /* Tooltips */
 .cont-tooltip .tooltip {
+  position: absolute;
+  visibility: hidden;
+}
+.tooltipActive {
   background-color:  #59b850;
   border-radius: 5px;
   color: #000000;
@@ -196,21 +200,15 @@ body {
   padding: 5px 5px;
   position: absolute;
   text-align: center;
-  visibility: hidden;
+  visibility: visible;
   width: auto;
   z-index: 1;
-  /*En1segundoseoscureceelfondode0%a100%deopacidad*/opacity: 0;
-  transition: opacity 1s;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  -webkit-transition: opacity 1s;
-  -moz-transition: opacity 1s;
-  -ms-transition: opacity 1s;
-  -o-transition: opacity 1s;
 }
-.cont-tooltip .tooltip::after {
+.tooltipActive::after {
   border-width: 5px;
   border-style: solid;
   border-color: transparent #59b850 transparent transparent;
@@ -220,11 +218,6 @@ body {
   position: absolute;
   top: 50%;
 }
-.cont-tooltip:hover .tooltip {
-  opacity: 1;
-  visibility: visible;
-}
-
 
 /* Estilos responsive */
 @media (max-width: 425px) {

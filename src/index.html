@@ -11,34 +11,41 @@
   <link href="https://fonts.googleapis.com/css?family=Merriweather|Noto+Sans" rel="stylesheet">
   <title>Formulario de encuesta </title>
 </head>
+
 <body>
   <div class="container-all" id="main">
     <div class="header">
       <a target="_blank" href="https://www.lineauno.pe/">
         <figure class="logo">
-          <img class="img-logo" id="img-logo" src="images/metro-de-lima-logo.png">
+          <img class="img-logo" id="img-logo" src="../images/metro-de-lima-logo.png">
         </figure>
       </a>
       <h1 class="title font1" id="title">Encuesta de Satisfacción del cliente</h1>
     </div>
     <div class="main">
       <h2 class="subtitle font1 margin-bottom1" id="subtitle">Ayúdenos a mejorar</h2>
-      <p class="font1 description margin-bottom2" id="description">Dedique unos minutos a completar esta pequeña encuesta, dura aproximadamente cinco minutos.
-        Sus
-        respuestas serán tratadas de forma confidencial y serán utilizadas únicamente para mejorar el servicio que le
+      <p class="font1 description margin-bottom2" id="description">Dedique unos minutos a completar esta pequeña
+        encuesta, dura aproximadamente cinco minutos.
+        Sus respuestas serán tratadas de forma confidencial y serán utilizadas únicamente para mejorar el servicio que le
         proporcionamos.</p>
       <form action="process.php" method="post" name="survey-form" class="survey-form font2" id="survey-form">
-        <label for="name" id="name-label" class="cont-tooltip margin-bottom1">Nombre <span class="required" title="Requerido">*</span> 
-          <input name="user" class="personal-information font2" type="text" id="name" minlength="6" maxlength="40" placeholder="Ingresa tu nombre y apellido">
-          <span class=" tooltip tooltip-name">Llenar campo, usando mínimo 6 carácteres y máximo 40 carácteres.</span>
+        <label for="name" id="name-label" class="cont-tooltip margin-bottom1">Nombre <span class="required"
+            title="Requerido">*</span>
+          <input name="user" class="personal-information font2" type="text" id="name" minlength="6" maxlength="40"
+            placeholder="Ingresa tu nombre y apellido">
+          <span id="tooltip-name" class="tooltip">Llenar campo, usando mínimo 6 carácteres y máximo 40 carácteres.</span>
         </label>
-        <label for="number" id="age-label" class="cont-tooltip margin-bottom1">Edad <span class="required" title="Requerido">*</span>
+        <label for="number" id="age-label" class="cont-tooltip margin-bottom1">Edad <span class="required"
+            title="Requerido">*</span>
           <input name="age" class="personal-information font2" id="number" type="number" placeholder="18">
-          <span class="tooltip tooltip-age">La edad mínima para llenar el formulario es de 16 años y la maxima de 80 años.</span>
+          <span id="tooltip-age" class="tooltip">La edad mínima para llenar el formulario es de 16 años y la maxima de 80
+            años.</span>
         </label>
-        <label for="email" id="email-label" class="cont-tooltip margin-bottom2">Email <span class="required" title="Requerido">*</span>
-          <input name="email" class="personal-information font2" type="email" id="email" maxlength="35" placeholder="ejemplo@email.com">
-          <span class="tooltip tooltip-email">Asegurate de escribir tu correo correctamente.</span>
+        <label for="email" id="email-label" class="cont-tooltip margin-bottom2">Email <span class="required"
+            title="Requerido">*</span>
+          <input name="email" class="personal-information font2" type="email" id="email" maxlength="35"
+            placeholder="ejemplo@email.com">
+          <span id="tooltip-email" class="tooltip">Asegurate de escribir tu correo correctamente.</span>
         </label>
         <label class="margin-bottom1">¿Cuánto tiempo lleva utilizando los servicios del metro de Lima?</label>
         <select class="font2 options-margin option-improve margin-bottom2" id="dropdown">
@@ -148,9 +155,11 @@
           <input type="checkbox" value="7">
           Señalización
         </label>
-        <label for="comment" class="margin-bottom2">¿Hay alguna cosa que le gustaría decirle al metro de Lima sobre el servicio que
+        <label for="comment" class="margin-bottom2">¿Hay alguna cosa que le gustaría decirle al metro de Lima sobre el
+          servicio que
           proporciona?</label>
-        <textarea class="font2 txt-opinion options-margin margin-bottom2" id="comment" placeholder="Sí, me gustaría..."></textarea>
+        <textarea class="font2 txt-opinion options-margin margin-bottom2" id="comment"
+          placeholder="Sí, me gustaría..."></textarea>
         <div class="cont-btn-submit">
           <input class="btn-submit font2 margin-bottom2" type="submit" id="btn-submit" value="Enviar">
         </div>
@@ -159,4 +168,5 @@
   </div>
 </body>
 <script src="validate.js"></script>
+
 </html>
