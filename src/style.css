@@ -5,12 +5,12 @@ body {
 /* Fondo de pantalla */
 .container-all {
   background-image: url(../images/metro-de-lima.jpg);
-  padding-block-end: 5%;
+  padding-block-end: 2%;
 }
 .main {
   background-color: rgba(60,122,209,.9);
   border-radius: 40px;
-  margin: 3% 7%;
+  margin: 4% 14%;
   padding: 5%;
   -webkit-border-radius: 40px;
   -moz-border-radius: 40px;
@@ -47,12 +47,12 @@ body {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: no-wrap;
-  height: 100px;
+  height: 80px;
   justify-content: space-between;
   width: auto;
 }
 .logo {
-  margin: 0 10%;
+  margin: 0 20%;
 }
 .img-logo {
   height: 55%;
@@ -61,14 +61,14 @@ body {
 
 /* Título, súbtitulo e introducción*/
 .title {
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin: 2% 5%; 
 }
 .subtitle {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 .description {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
  /* Formulario  */
