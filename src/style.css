@@ -61,14 +61,14 @@ body {
 
 /* Título, súbtitulo e introducción*/
 .title {
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin: 2% 5%; 
 }
 .subtitle {
-  font-size: 1rem;
+  font-size: 0.7rem;
 }
 .description {
-  font-size: 0.9rem;
+  font-size: 0.6rem;
 }
 
  /* Formulario  */
