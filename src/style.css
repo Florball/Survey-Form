@@ -256,7 +256,8 @@
 }
 @media (max-width: 425px) {
   .logo {
-    margin: 2rem;
+    margin: 1rem;
+    width: 5.5rem;
   }
   .img-logo {
     height: 50%;
@@ -327,6 +328,9 @@
   }
 }
 @media (max-width: 375px) {
+  .img-logo {
+    width: 2.3rem;
+  }
   .main {
     border-radius: 20px;
     -webkit-border-radius: 20px;
