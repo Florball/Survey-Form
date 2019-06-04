@@ -1,5 +1,6 @@
-body {
+* {
   margin: 0;
+  padding: 0;
 }
 
 /* Fondo de pantalla */
@@ -126,13 +127,13 @@ body {
   border: 1.5px solid #383838;
   color: #383838;
 }
-.options-margin {
-  margin-inline-start: 2.7rem;
-}
 .list {
   margin-inline-start: 0;
   line-height: 2rem;
   list-style: none;
+}
+.options-margin {
+  margin-inline-start: 2.7rem;
 }
 .txt-opinion {
   border-radius: 12px;
@@ -198,6 +199,7 @@ body {
   font-size: 0.93rem;
   left: 60%;
   margin-left: -60px;
+  margin-right: 2%;
   padding: 5px 5px;
   position: absolute;
   text-align: center;
@@ -222,9 +224,23 @@ body {
 
 /* Estilos responsive */
 @media (max-width: 768px) {
+  .survey-form {
+    font-size: 0.9rem;
+  }
+  .personal-information {
+    height: 0.9rem;
+  }
+  .personal-information::-webkit-input-placeholder{
+    color: #ccc9c9;
+    font-size: 0.9rem;
+  }
   .option-improve {
-    font-size: 1rem;
+    font-size: 0.8rem;
     width: 40%;
+  }
+  .txt-opinion {
+    font-size: 0.9rem;
+    width: 75%;
   }
   .cont-btn-submit {
     align-items: center;
@@ -232,21 +248,25 @@ body {
     flex-direction: column;
   }
   .btn-submit {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-inline-start: 0;
     text-align: center;
     width: 29%;
   }
 }
 @media (max-width: 425px) {
+  .logo {
+    margin: 2rem;
+  }
   .img-logo {
-    width: 60%;
+    height: 50%;
+    width: 50%;
   }
   .title {
     font-size: 1.2rem;
   }
   .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .description {
     font-size: 1rem;
@@ -255,6 +275,8 @@ body {
     font-size: 0.9rem;
   }
   .personal-information {
+    font-size: 0.7rem;
+    height: 0.7rem;
     width: calc(100% - 6rem);
   }
   .personal-information::-webkit-input-placeholder{
@@ -269,16 +291,39 @@ body {
     padding-left: 1rem;
   }
   .option-improve {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    height: 1.7rem;
+    margin-left: 0.9rem;
     width: 65%;
   }
   .txt-opinion {
     font-size: 0.9rem;
-    width: 88%;
+    padding: 0.2rem 0.4rem;
+    width: 90%;
   }
   .btn-submit {
     font-size: 0.9rem;
     width: 35%;
+  }
+  .error {
+    border-radius: 10px;
+    font-size: 0.8rem;
+    height: 0.8rem;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  .tooltipActive {
+    color: #000000;
+    background: #ffffff;
+    border: 1px solid #dd1a1a;
+    font-size: 0.6rem;
+    left: 70%;
+    padding: 3px 4px;
+  }
+  .tooltipActive::after {
+    border-color: transparent #dd1a1a transparent transparent;
   }
 }
 @media (max-width: 375px) {
@@ -288,7 +333,11 @@ body {
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
-}
+  }
+  .survey-form {
+  
+  font-size: 0.8rem;
+  }
   .title {
     font-size: 0.9rem;
   }
@@ -299,12 +348,16 @@ body {
     font-size: 0.8rem;
   }
   .options-margin {
-    padding-left: 0rem;
+    padding-left: 0.3rem;
   }
   .option-improve {
     font-size: 0.8rem;
     margin-inline-start: 0;
-    width: 90%;
+    width: 93%;
+  }
+  .txt-opinion {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
   }
   .options-margin {
     margin-inline-start: 0.6rem;
