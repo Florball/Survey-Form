@@ -28,17 +28,17 @@
         encuesta, dura aproximadamente cinco minutos.
         Sus respuestas serán tratadas de forma confidencial y serán utilizadas únicamente para mejorar el servicio que le
         proporcionamos.</p>
-      <form action="process.php" method="post" name="survey-form" class="survey-form font2" id="survey-form">
+      <form method="post" name="survey-form" class="survey-form font2" id="survey-form">
         <label for="name" id="name-label" class="cont-tooltip margin-bottom1">Nombre <span class="required"
             title="Requerido">*</span>
           <input name="user" class="personal-information font2" type="text" id="name" minlength="6" maxlength="40"
             placeholder="Ingresa nombre y apellido">
-          <span id="tooltip-name" class="tooltip">Llenar campo, usando mínimo 6 carácteres y máximo 40 carácteres.</span>
+          <span id="tooltip-name" class="tooltip">Usa mínimo 6 carácteres y máximo 40.</span>
         </label>
         <label for="number" id="age-label" class="cont-tooltip margin-bottom1">Edad <span class="required"
             title="Requerido">*</span>
           <input name="age" class="personal-information font2" id="number" type="number" placeholder="18">
-          <span id="tooltip-age" class="tooltip">La edad mínima es de 16 años y la maxima de 80
+          <span id="tooltip-age" class="tooltip">La edad mínima es 16 años y la maxima es 80
             años.</span>
         </label>
         <label for="email" id="email-label" class="cont-tooltip margin-bottom2">Email <span class="required"
@@ -66,7 +66,7 @@
           <option>Nunca los he utilizado</option>
         </select>
         <label>En comparación con otras alternativas de transporte público, el metro de Lima es...</label>
-        <ul class="list margin-bottom1 options-margin">
+        <ul class="list options-margin">
           <li>
             <label>
               <input type="radio" name="comparison-buttom" value="1">
@@ -99,7 +99,7 @@
           </li>
           <li>
             <label>
-              <input type="radio" name="comparison-buttom" value="3">
+              <input class="margin-bottom2" type="radio" name="comparison-buttom" value="3">
               No lo sé
             </label>
           </li>
@@ -120,7 +120,7 @@
           </li>
           <li>
             <label>
-              <input type="radio" name="recommendation-buttom" value="3">
+              <input class="margin-bottom2" type="radio" name="recommendation-buttom" value="3">
               Improbable
             </label>
           </li>
@@ -155,9 +155,8 @@
           <input type="checkbox" value="7">
           Señalización
         </label>
-        <label for="comment" class="margin-bottom2">¿Hay alguna cosa que le gustaría decirle al metro de Lima sobre el
-          servicio que
-          proporciona?</label>
+        <label for="comment" class="margin-bottom1">¿Hay alguna cosa que le gustaría decirle al metro de Lima sobre el
+          servicio que proporciona?</label>
         <textarea class="font2 txt-opinion options-margin margin-bottom2" id="comment"
           placeholder="Sí, me gustaría..."></textarea>
         <div class="cont-btn-submit">

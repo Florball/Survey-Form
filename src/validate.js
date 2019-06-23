@@ -46,21 +46,7 @@ const validateName = (evt) => {
 // Funcion validar edad. 
 const validateAge = (evt) => {
   const ageValue = age.value; 
-  if (ageValue === '') {
-    age.className = 'error';
-    tooltipAge.classList.replace('tooltip', 'tooltipActive');
-    scrollTo(document.body, 200);
-    age.focus();
-    evt.preventDefault();
-  }
-  else if (ageValue < 16 || ageValue > 80) {
-    age.className = 'error';
-    tooltipAge.classList.replace('tooltip', 'tooltipActive');
-    scrollTo(document.body, 200);
-    age.focus();
-    evt.preventDefault();
-  }
-  else if (isNaN(ageValue)) {
+  if (ageValue === '' || ageValue < 16 || ageValue > 80 || isNaN(ageValue)) {
     age.className = 'error';
     tooltipAge.classList.replace('tooltip', 'tooltipActive');
     scrollTo(document.body, 200);
